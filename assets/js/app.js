@@ -194,6 +194,31 @@ $.getJSON("data/15_chiba_city_bicyclemap_orengeline.geojson", function (data) {
     bicyclemap_orengeline.addData(data);
 });
 
+var contour_10_layer = L.geoJson(null, {
+  style: function (feature) {
+    return {
+      color: "#1f78b4",
+      fill: false,
+      weight: 1,
+      opacity: 0.8,
+      clickable: false
+    };
+  }
+  /*
+  onEachFeature: function (feature, layer) {
+    boroughSearch.push({
+      name: layer.feature.properties.BoroName,
+      source: "Boroughs",
+      id: L.stamp(layer),
+      bounds: layer.getBounds()
+    });
+}*/
+});
+$.getJSON("data/chiba_contour_10.geojson", function (data) {
+    contour_10_layer.addData(data);
+});
+
+
 /* Empty layer placeholder to add to layer control for listening when to add/remove theaters to markerClusters layer */
 var bicycleShopLayer = L.geoJson(null);
 var bicycleShop = L.geoJson(null, {
@@ -349,6 +374,9 @@ var groupedOverlays = {
     "Bicycle Green Line": bicyclemap_greenline,
     "Bicycle Pink Line": bicyclemap_pinkline,
     "Bicycle Orenge Line": bicyclemap_orengeline
+  },
+  "地形": {
+    "等高線(10m)": contour_10_layer
   }
 };
 
