@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.042108,
+          35.671792
+        ]
+      },
+      "properties": {
+        "name": "幕張本郷駅第1自転車駐車場",
+        "address": "千葉県千葉市花見川区幕張本郷２丁目２−３１",
+        "capacity": 200,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.043797,
+          35.674934
+        ]
+      },
+      "properties": {
+        "name": "幕張本郷駅第3自転車駐車場",
+        "address": "千葉県千葉市花見川区幕張本郷６丁目２３",
+        "capacity": 100,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.059102,
+          35.660535
+        ]
+      },
+      "properties": {
+        "name": "幕張駅第2自転車駐車場",
+        "address": "千葉県千葉市花見川区幕張町6丁目９９－１",
+        "capacity": 100,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.057289,
+          35.659598
+        ]
+      },
+      "properties": {
+        "name": "幕張駅第4自転車駐車場",
+        "address": "千葉県千葉市花見川区幕張町５丁目",
+        "capacity": 200,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.074487,
+          35.650775
+        ]
+      },
+      "properties": {
+        "name": "新検見川駅第1自転車駐車場",
+        "address": "千葉県千葉市花見川区南花園１丁目４３－１",
+        "capacity": 200,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.075592,
+          35.653683
+        ]
+      },
+      "properties": {
+        "name": "新検見川駅第6自転車駐車場",
+        "address": "千葉県千葉市花見川区花園５丁目３－３",
+        "capacity": 100,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.091321,
+          35.6386
+        ]
+      },
+      "properties": {
+        "name": "稲毛駅第1自転車駐車場",
+        "address": "千葉県千葉市稲毛区稲毛東４丁目１",
+        "capacity": 200,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.093628,
+          35.635509
+        ]
+      },
+      "properties": {
+        "name": "稲毛駅第2自転車駐車場",
+        "address": "千葉県千葉市稲毛区稲毛東３丁目１９",
+        "capacity": 100,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.102221,
+          35.623596
+        ]
+      },
+      "properties": {
+        "name": "西千葉駅第1自転車駐車場",
+        "address": "千葉県千葉市中央区春日２丁目２６−１４",
+        "capacity": 100,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.104002,
+          35.622528
+        ]
+      },
+      "properties": {
+        "name": "西千葉駅第3自転車駐車場",
+        "address": "千葉県千葉市中央区松波２丁目６",
+        "capacity": 203,
+        "isBicycle": 1,
+        "isSmallBike": 0
+      }
+    }
+  ]
+}
