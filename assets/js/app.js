@@ -284,7 +284,7 @@ $.getJSON("data/parking.geojson", function (data) {
 map = L.map("map", {
   zoom: 10,
   center: [35.600252, 140.098042],
-  layers: [mapquestOSM, bicycle_lane],
+  layers: [mapquestOSM, bicycle_lane, bicyclemap_blueline, bicyclemap_greenline, bicyclemap_pinkline, bicyclemap_orengeline],
   zoomControl: false,
   attributionControl: false
 });
