@@ -214,10 +214,11 @@ var contour_10_layer = L.geoJson(null, {
     });
 }*/
 });
+/*
 $.getJSON("data/chiba_contour_10.geojson", function (data) {
     contour_10_layer.addData(data);
 });
-
+*/
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove theaters to markerClusters layer */
 var bicycleShopLayer = L.geoJson(null);
@@ -374,10 +375,10 @@ var groupedOverlays = {
     "Bicycle Green Line": bicyclemap_greenline,
     "Bicycle Pink Line": bicyclemap_pinkline,
     "Bicycle Orenge Line": bicyclemap_orengeline
-  },
+}/* ,
   "地形": {
     "等高線(10m)": contour_10_layer
-  }
+}*/
 };
 
 var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
