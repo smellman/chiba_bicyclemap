@@ -39,8 +39,9 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 
-            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;About</a></li>
+            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;情報</a></li>
             <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="legend-btn"><i class="fa fa-picture-o"></i>&nbsp;&nbsp;凡例</a></li>
+            <!--
             <li class="dropdown">
                 <a class="dropdown-toggle" id="downloadDrop" href="#" role="button" data-toggle="dropdown"><i class="fa fa-cloud-download white"></i>&nbsp;&nbsp;Download <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -50,6 +51,7 @@
                   <li><a href="data/DOITT_MUSEUM_01_13SEPT2010.geojson" download="museums.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Museums</a></li>
                 </ul>
             </li>
+        -->
             <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="list-btn"><i class="fa fa-list white"></i>&nbsp;&nbsp;POI List</a></li>
           </ul>
           <form class="navbar-form navbar-right" role="search">
@@ -114,13 +116,13 @@
         <div class="modal-content">
           <div class="modal-header">
             <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Welcome to the BootLeaf template!</h4>
+            <h4 class="modal-title">千葉市自転車走りやすさマップ</h4>
           </div>
           <div class="modal-body">
             <ul class="nav nav-tabs" id="aboutTabs">
-              <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;About the project</a></li>
-              <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;Contact us</a></li>
-              <li><a href="#disclaimer" data-toggle="tab"><i class="fa fa-exclamation-circle"></i>&nbsp;Disclaimer</a></li>
+              <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;このプロジェクトについて</a></li>
+              <li><a href="#disclaimer" data-toggle="tab"><i class="fa fa-exclamation-circle"></i>&nbsp;免責事項</a></li>
+              <!--
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i>&nbsp;Metadata <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -130,10 +132,19 @@
                   <li><a href="#museums-tab" data-toggle="tab">Museums</a></li>
                 </ul>
               </li>
+          -->
             </ul>
             <div class="tab-content" id="aboutTabsContent">
               <div class="tab-pane fade active in" id="about">
-                <p>A simple, responsive template for building web mapping applications with <a href="http://getbootstrap.com/">Bootstrap 3</a>, <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, and <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a>. Open source, MIT licensed, and available on <a href="https://github.com/bmcbride/bootleaf" target="_blank">GitHub</a>.</p>
+                <p>この地図は千葉市が作成している<a href="http://www.city.chiba.jp/kensetsu/doboku/bicycle/soukoukankyouseibi.html" target="_blank">千葉市走りやすさマップ</a>をオンラインに移植をしたものです。
+                    紙のデータを<a href="http://umap.openstreetmap.fr/ja/" target="_blank">uMap</a>を使ってオンライン上でデータ化をして、
+                    そのデータを元に<a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a>をベースにオンライン地図にしました。
+                    このオンライン地図は、オープン！千葉の活動及び
+                    <a href="http://opendataday.org/index_ja.html" target="_blank">International Open Data Day 2015</a>の活動にて生まれました。
+                    全てのデータ及びプログラムは<a href="https://github.com/smellman/chiba_bicyclemap" target="_blank">Github</a>にて公開されています。
+                    背景地図は<a href="http://www.gsi.go.jp/" target="_blank">国土地理院</a>の<a href="http://portal.cyberjapan.jp/help/development/ichiran.html" target="_blank">地理院タイル</a>を利用しています。
+                </p>
+                <!--
                 <div class="panel panel-primary">
                   <div class="panel-heading">Features</div>
                   <ul class="list-group">
@@ -145,42 +156,12 @@
                     <li class="list-group-item">Marker icons included in grouped layer control via the <a href="https://github.com/ismyrnow/Leaflet.groupedlayercontrol" target="_blank">grouped layer control plugin</a></li>
                   </ul>
                 </div>
+                -->
               </div>
               <div id="disclaimer" class="tab-pane fade text-danger">
-                <p>The data provided on this site is for informational and planning purposes only.</p>
-                <p>Absolutely no accuracy or completeness guarantee is implied or intended. All information on this map is subject to such variations and corrections as might result from a complete title search and/or accurate field survey.</p>
+                <p>自転車を走りながらの閲覧はやめましょう！</p>
               </div>
-              <div class="tab-pane fade" id="contact">
-                <form id="contact-form">
-                  <div class="well well-sm">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="first-name">First Name:</label>
-                          <input type="text" class="form-control" id="first-name">
-                        </div>
-                        <div class="form-group">
-                          <label for="last-name">Last Name:</label>
-                          <input type="text" class="form-control" id="last-email">
-                        </div>
-                        <div class="form-group">
-                          <label for="email">Email:</label>
-                          <input type="text" class="form-control" id="email">
-                        </div>
-                      </div>
-                      <div class="col-md-8">
-                        <label for="message">Message:</label>
-                        <textarea class="form-control" rows="8" id="message"></textarea>
-                      </div>
-                      <div class="col-md-12">
-                        <p>
-                          <button type="submit" class="btn btn-primary pull-right" data-dismiss="modal">Submit</button>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
+              <!--
               <div class="tab-pane fade" id="boroughs-tab">
                 <p>Borough data courtesy of <a href="http://www.nyc.gov/html/dcp/html/bytes/meta_dis_nyboroughwi.shtml" target="_blank">New York City Department of City Planning</a></p>
               </div>
@@ -193,6 +174,7 @@
               <div class="tab-pane fade" id="museums-tab">
                 <p>Museum data courtesy of <a href="https://data.cityofnewyork.us/Recreation/Museums-and-Galleries/sat5-adpb" target="_blank">NYC Department of Information & Telecommunications (DoITT)</a></p>
               </div>
+          -->
             </div>
           </div>
           <div class="modal-footer">
