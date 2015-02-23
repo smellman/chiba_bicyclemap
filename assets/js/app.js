@@ -154,7 +154,8 @@ var bicyclemap_pinkline = L.geoJson(null, {
       fill: false,
       weight: 3,
       opacity: 1,
-      clickable: false
+      clickable: false,
+      dashArray: "5,5"
     };
   }
   /*
@@ -177,7 +178,8 @@ var bicyclemap_orengeline = L.geoJson(null, {
       fill: false,
       weight: 3,
       opacity: 1,
-      clickable: false
+      clickable: false,
+      dashArray: "5,5"
     };
   }
   /*
@@ -369,12 +371,12 @@ var groupedOverlays = {
     "駐車場": parkingLayer,
     "自転車屋": bicycleShopLayer
   },
-  "Reference": {
-    "Bicycle Lane": bicycle_lane,
-    "Bicycle Blue Line": bicyclemap_blueline,
-    "Bicycle Green Line": bicyclemap_greenline,
-    "Bicycle Pink Line": bicyclemap_pinkline,
-    "Bicycle Orenge Line": bicyclemap_orengeline
+  "走りやすさ": {
+    "自転車用道路": bicycle_lane,
+    "○": bicyclemap_blueline,
+    "△": bicyclemap_greenline,
+    "✕　幅の広い歩道なし": bicyclemap_pinkline,
+    "✕　幅の広い歩道あり": bicyclemap_orengeline
 }/* ,
   "地形": {
     "等高線(10m)": contour_10_layer
