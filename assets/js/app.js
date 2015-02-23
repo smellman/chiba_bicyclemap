@@ -257,7 +257,7 @@ var bicycleShop = L.geoJson(null, {
 $.getJSON("data/bicycle_shop_map.geojson", function (data) {
     bicycleShop.addData(data);
     bicycleShop.addTo(bicycleShopLayer);
-    map.addLayer(bicycleShopLayer);
+    //map.addLayer(bicycleShopLayer);
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove museums to markerClusters layer */
@@ -300,8 +300,52 @@ var parkings = L.geoJson(null, {
 $.getJSON("data/parking.geojson", function (data) {
   parkings.addData(data);
   parkings.addTo(parkingLayer);
-  map.addLayer(parkingLayer);
+  //map.addLayer(parkingLayer);
 });
+
+var busStopLayer = L.geoJson(null);
+var busStop = L.geoJson(null, {
+  pointToLayer: function (feature, latlng) {
+    return L.marker(latlng, {
+      icon: L.icon({
+        iconUrl: "assets/img/bus-18.png",
+        iconSize: new L.Point(18, 18),
+        opacity: 1
+      }),
+      title: feature.properties.name
+    });
+  },
+  onEachFeature: function (feature, layer) {
+    if (feature.properties) {
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Name</th><td>" + feature.properties.P11_001 + "</td></tr>" + "<table>";
+      layer.on({
+        click: function (e) {
+          $("#feature-title").html(feature.properties.P11_001);
+          $("#feature-info").html(content);
+          $("#featureModal").modal("show");
+          //highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
+        }
+      });
+      /*
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/theater.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      theaterSearch.push({
+        name: layer.feature.properties.NAME,
+        address: layer.feature.properties.ADDRESS1,
+        source: "Theaters",
+        id: L.stamp(layer),
+        lat: layer.feature.geometry.coordinates[1],
+        lng: layer.feature.geometry.coordinates[0]
+      });
+      */
+    }
+  }
+});
+$.getJSON("data/bus_stop.geojson", function (data) {
+    busStop.addData(data);
+    busStop.addTo(busStopLayer);
+    //map.addLayer(busStopLayer);
+});
+
 
 map = L.map("map", {
   zoom: 10,
@@ -362,8 +406,9 @@ var baseLayers = {
 var groupedOverlays = {
   "Points of Interest": {
     "駐車場": parkingLayer,
-    "自転車屋": bicycleShopLayer
-  },
+    "自転車屋": bicycleShopLayer,
+    "バス停": busStopLayer
+    },
   "走りやすさ": {
     "自転車用道路": bicycle_lane,
     "○": bicyclemap_blueline,
